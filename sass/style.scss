@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.flex-container {
+	//general
+	height: 100vh;
+	overflow: hidden;
+	background-color: rgb(32, 32, 32);
+
+	//flex
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.notepad {
+		//general
+		min-height: 900px;
+		width: 500px;
+		background-image: url("../img/notepad.png");
+		background-size: cover;
+		background-position: center;
+
+		//flex
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&__ul {
+			//general
+			position: relative;
+			top: 15px;
+			right: 4px;
+			height: 488px;
+			width: 360px;
+			background-color: rgba(0, 0, 0, 0.575);
+
+			//grid
+			display: grid;
+		}
+	}
+}
