@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+
 * {
 	margin: 0;
 	padding: 0;
@@ -6,8 +8,13 @@
 .flex-container {
 	//general
 	height: 100vh;
+	max-height: 100vh;
 	overflow: hidden;
-	background-color: rgb(32, 32, 32);
+	background-image: url(../img/bg.jpg);
+	background-position: center;
+	background-size: cover;
+	font-family: "Shadows Into Light", cursive;
+	font-size: 22px;
 
 	//flex
 	display: flex;
@@ -34,10 +41,37 @@
 			right: 4px;
 			height: 488px;
 			width: 360px;
-			background-color: rgba(0, 0, 0, 0.575);
+			overflow: hidden;
 
 			//grid
 			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(14, 34.8px);
+		}
+
+		&__li-item {
+			padding-left: 10px;
+
+			//grid
+			display: grid;
+			grid-template-columns: 1fr repeat(2, 30px);
+		}
+
+		&__task-content {
+			line-height: 34.8px;
+			overflow: hidden;
+		}
+
+		&__btn {
+			line-height: 34.8px;
+
+			&--check {
+				color: #52b788;
+			}
+
+			&--del {
+				color: #e5383b;
+			}
 		}
 	}
 }
