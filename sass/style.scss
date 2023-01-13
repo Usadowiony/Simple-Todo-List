@@ -1,10 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@mixin text {
+	font-family: "Shadows Into Light", cursive;
+	font-size: 22px;
+	color: rgb(24, 24, 24);
+}
+$check-color: #52b788;
+$del-color: #e5383b;
+$plus-color: #22acfc;
+$pointer-time: 0.2s;
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+
 .flex-container {
 	//general
 	height: 100vh;
@@ -13,8 +23,7 @@
 	background-image: url(../img/bg.jpg);
 	background-position: center;
 	background-size: cover;
-	font-family: "Shadows Into Light", cursive;
-	font-size: 22px;
+	@include text;
 
 	//flex
 	display: flex;
@@ -42,6 +51,7 @@
 			height: 488px;
 			width: 360px;
 			overflow: hidden;
+			padding: 0 4px;
 
 			//grid
 			display: grid;
@@ -50,11 +60,9 @@
 		}
 
 		&__li-item {
-			padding-left: 10px;
-
 			//grid
 			display: grid;
-			grid-template-columns: 1fr repeat(2, 30px);
+			grid-template-columns: 1fr repeat(2, 23px);
 		}
 
 		&__task-content {
@@ -63,15 +71,51 @@
 		}
 
 		&__btn {
-			line-height: 34.8px;
+			transition: $pointer-time;
+			cursor: pointer;
+			font-size: 19px;
+			text-align: center;
+
+			//flex
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
 			&--check {
-				color: #52b788;
+				&:hover {
+					color: $check-color;
+				}
+				&:active {
+					color: lighten($check-color, 25%);
+				}
 			}
 
 			&--del {
-				color: #e5383b;
+				&:hover {
+					color: $del-color;
+				}
+				&:active {
+					color: lighten($del-color, 25%);
+				}
 			}
+
+			&--plus {
+				grid-column: 3;
+
+				&:hover {
+					color: $plus-color;
+				}
+				&:active {
+					color: lighten($plus-color, 25%);
+				}
+			}
+		}
+
+		&__input {
+			@include text;
+			background: none;
+			border: none;
+			outline: none;
 		}
 	}
 }
