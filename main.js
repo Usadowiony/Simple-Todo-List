@@ -9,6 +9,9 @@ newtaskBtn.addEventListener("click", () => {
 
 	if (liItems.length >= 14) {
 		warning.textContent = "You already have the maximum number of tasks";
+	} else if (inputValue.length > 32) {
+		warning.textContent =
+			"The length of the task name cannot exceed 32 characters";
 	} else if (inputValue !== "") {
 		const li_item = document.createElement("div");
 		li_item.classList.add("notepad__li-item");
