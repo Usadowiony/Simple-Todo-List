@@ -66,7 +66,7 @@ $pointer-time: 0.2s;
 		}
 
 		&__task-content {
-			line-height: 34.8px;
+			margin-top: 3.5px;
 			overflow: hidden;
 		}
 
@@ -112,6 +112,8 @@ $pointer-time: 0.2s;
 		}
 
 		&__input {
+			height: 22px;
+			margin-top: 10px;
 			@include text;
 			background: none;
 			border: none;
