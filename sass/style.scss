@@ -81,9 +81,11 @@ $pointer-time: 0.2s;
 
 			&--completed {
 				color: $completed-color;
+				transition: 0.2s;
 
 				.notepad__task-content {
 					text-decoration: line-through;
+					transition: 0.2s;
 				}
 			}
 		}
