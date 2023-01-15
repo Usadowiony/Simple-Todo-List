@@ -41,8 +41,10 @@ newtaskBtn.addEventListener("click", () => {
 
 notepadUl.addEventListener("click", e => {
 	if (e.target.matches(".notepad__btn--check")) {
-		e.target.closest(".notepad__li-item").classList.toggle("notepad__li-item--completed");
+		e.target
+			.closest(".notepad__li-item")
+			.classList.toggle("notepad__li-item--completed");
 	} else if (e.target.matches(".notepad__btn--del")) {
-		console.log("del");
+		e.target.closest(".notepad__li-item").remove();
 	}
 });
