@@ -7,6 +7,7 @@
 $check-color: #52b788;
 $del-color: #e5383b;
 $plus-color: #22acfc;
+$completed-color: rgb(109, 109, 109);
 $pointer-time: 0.2s;
 
 * {
@@ -63,6 +64,14 @@ $pointer-time: 0.2s;
 			//grid
 			display: grid;
 			grid-template-columns: 1fr repeat(2, 23px);
+
+			&--completed {
+				color: $completed-color;
+
+				.notepad__task-content {
+					text-decoration: line-through;
+				}
+			}
 		}
 
 		&__task-content {

@@ -35,6 +35,14 @@ newtaskBtn.addEventListener("click", () => {
 		notepadUl.append(li_item);
 	} else {
 		//IF INPUT IS EMPTY
-		console.log("psute");
+		alert("zrob to");
+	}
+});
+
+notepadUl.addEventListener("click", e => {
+	if (e.target.matches(".notepad__btn--check")) {
+		e.target.closest(".notepad__li-item").classList.toggle("notepad__li-item--completed");
+	} else if (e.target.matches(".notepad__btn--del")) {
+		console.log("del");
 	}
 });
