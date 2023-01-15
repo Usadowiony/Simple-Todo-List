@@ -56,6 +56,13 @@ notepadUl.addEventListener("click", e => {
 			.closest(".notepad__li-item")
 			.classList.toggle("notepad__li-item--completed");
 	} else if (e.target.matches(".notepad__btn--del")) {
-		e.target.closest(".notepad__li-item").remove();
+		let popupDel = `Are you sure you want to delete task:\n${
+			e.target.closest(".notepad__li-item").firstChild.textContent
+		}`;
+		if (confirm(popupDel) == true) {
+			e.target.closest(".notepad__li-item").remove();
+		} else {
+			return;
+		}
 	}
 });

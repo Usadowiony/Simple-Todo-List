@@ -23,11 +23,20 @@ $pointer-time: 0.2s;
 	width: 100%;
 	z-index: 1;
 	text-align: center;
+	padding: 0 5vw;
 
 	font-family: "Shadows Into Light Two", cursive;
 	font-size: 28px;
 	color: #fff;
-	text-shadow: 2px 2px 6px #0a0a0ad0;
+	text-shadow: 3px 3px 6px #0a0a0aec;
+	word-spacing: -4px;
+
+	@media (min-width: 1000px) {
+		padding: 0 10vw;
+	}
+	@media (min-width: 600px) {
+		padding: 0 15vw;
+	}
 }
 
 .flex-container {
@@ -81,11 +90,10 @@ $pointer-time: 0.2s;
 
 			&--completed {
 				color: $completed-color;
-				transition: 0.2s;
 
 				.notepad__task-content {
 					text-decoration: line-through;
-					transition: 0.2s;
+					transition: 0.15s;
 				}
 			}
 		}
