@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
 @mixin text {
-	font-family: "Shadows Into Light", cursive;
+	font-family: 'Shadows Into Light Two', cursive;
 	font-size: 22px;
 	color: rgb(24, 24, 24);
 }
@@ -121,8 +121,8 @@ $pointer-time: 0.2s;
 		}
 
 		&__input {
-			height: 22px;
-			margin-top: 10px;
+			margin-top: 2px;
+			overflow: visible;
 			@include text;
 			background: none;
 			border: none;
