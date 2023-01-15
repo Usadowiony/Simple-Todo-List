@@ -1,6 +1,7 @@
 const notepadUl = document.querySelector(".notepad__ul");
 const newtaskInput = document.querySelector(".notepad__input");
 const newtaskBtn = document.querySelector(".notepad__btn--plus");
+const warning = document.querySelector(".warning");
 
 newtaskBtn.addEventListener("click", () => {
 	const inputValue = newtaskInput.value;
@@ -33,9 +34,12 @@ newtaskBtn.addEventListener("click", () => {
 		// APPENDING
 		li_item.append(taskContent, checkBtn, delBtn);
 		notepadUl.append(li_item);
+
+		//reset to default
+		newtaskInput.value = "";
+		warning.textContent = "";
 	} else {
-		//IF INPUT IS EMPTY
-		alert("zrob to");
+		warning.textContent = "Enter the content of the task";
 	}
 });
 
