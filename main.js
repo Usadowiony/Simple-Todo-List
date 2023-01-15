@@ -5,7 +5,11 @@ const warning = document.querySelector(".warning");
 
 newtaskBtn.addEventListener("click", () => {
 	const inputValue = newtaskInput.value;
-	if (inputValue !== "") {
+	const liItems = document.querySelectorAll(".notepad__li-item");
+
+	if (liItems.length >= 14) {
+		warning.textContent = "You already have the maximum number of tasks";
+	} else if (inputValue !== "") {
 		const li_item = document.createElement("div");
 		li_item.classList.add("notepad__li-item");
 
