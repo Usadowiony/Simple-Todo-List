@@ -39,6 +39,15 @@ $pointer-time: 0.2s;
 	}
 }
 
+.github-ico {
+	position: absolute;
+	bottom: 2vh;
+	right: 4vw;
+	color: #fff;
+	font-size: 40px;
+	text-shadow: 3px 3px 6px #0a0a0aec;
+}
+
 .flex-container {
 	//general
 	height: 100vh;
