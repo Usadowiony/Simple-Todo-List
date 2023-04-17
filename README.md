@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-# 📋 Magic 8 Ball
+# 📋 Simple to do list
 
 <br />
   <p>
