@@ -8,7 +8,7 @@
     <br />
     ---
     <br />
-    <a href="https://fancy-speculoos-c37e3c.netlify.app/" target="_blank">View Demo</a>
+    <a href="https://sensational-figolla-f4db0b.netlify.app/" target="_blank">View Demo</a>
   </p>
 
 ## 🧰 Built With
